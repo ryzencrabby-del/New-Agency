@@ -1,0 +1,34 @@
+# Atlas Digital Agency — Project TODO
+
+- [x] Dark Noir homepage design (Syne + DM Sans fonts, violet accent)
+- [x] Navigation with all section links
+- [x] Hero section with Calendly CTA
+- [x] Services section (7 services)
+- [x] Why Atlas stats section
+- [x] Results / Our Work Speaks For Itself section
+- [x] Contact form with Web3Forms integration (hello@atlasdigitalagency.net)
+- [x] Footer with email and Calendly link
+- [x] Custom domain: atlasdigitalagency.net
+- [x] Stripe payments integration
+- [x] Pricing section with 4 service packages (SEO Starter, Growth Bundle, Agency Partner, Website Design)
+- [x] Stripe Checkout Session backend (tRPC mutation)
+- [x] Stripe webhook handler (/api/stripe/webhook)
+- [x] Payment Success page (/payment-success)
+- [x] Pricing nav link added
+- [x] Atlas Titan logo icon in nav and footer
+- [x] Social proof ticker bar
+- [x] Results section stat cards ($12M+, 50+, 98%, 300%)
+- [x] Service emoji icons on service cards
+- [x] Social media links (Instagram + TikTok) in footer and contact section
+- [x] Trust micro-copy in hero
+- [x] Real Instagram and TikTok links updated
+- [ ] Remove test card info from Pricing section (not for public)
+- [ ] Fix footer layout — add social column, improve spacing
+- [ ] Add FAQ section
+- [ ] Add client logo / trust bar below hero
+- [ ] Improve hero subtext readability (slightly too dim)
+- [ ] Add favicon using Atlas Titan logo
+- [ ] Privacy Policy page
+- [ ] Terms of Service page
+- [ ] Case studies / portfolio section
+- [ ] Team / About section

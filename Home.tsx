@@ -603,6 +603,76 @@ function Results() {
   );
 }
 
+// ─── Testimonials ─────────────────────────────────────────────────────────────
+function Testimonials() {
+  const { ref, inView } = useInView();
+
+  const testimonials = [
+    {
+      quote: "Atlas completely transformed how we handle leads. We went from slow, manual follow-ups to instant responses and fully automated booking. Within the first month, our calendar was noticeably fuller — and we didn't have to hire anyone to keep up.",
+      name: "Sarah M.",
+      title: "Owner, Home Services Company",
+      initials: "SM",
+    },
+    {
+      quote: "What stood out about Atlas is that everything actually works together. The website, ads, and AI automation aren't separate — they built a system that consistently brings in and converts leads. It feels like we finally have a real growth engine in place.",
+      name: "James R.",
+      title: "Founder, Consulting Firm",
+      initials: "JR",
+    },
+    {
+      quote: "The AI automation alone paid for itself. Leads are contacted immediately, pre-qualified, and booked onto our calendar without any back-and-forth. It's like having a 24/7 sales assistant that never misses an opportunity.",
+      name: "Daniel K.",
+      title: "Sales Director, SaaS Company",
+      initials: "DK",
+    },
+  ];
+
+  return (
+    <section id="testimonials" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "oklch(0.11 0.006 285)" }}>
+      <div className="violet-rule absolute top-0 left-0 right-0" />
+
+      <div className="container relative z-10" ref={ref}>
+        <div className={`text-center mb-16 ${inView ? "animate-fade-up" : "opacity-0"}`}>
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: "oklch(0.72 0.18 293)", fontFamily: "'DM Sans', sans-serif" }}>Client Results</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4" style={{ fontFamily: "'Syne', sans-serif" }}>
+            What Our Clients
+            <br />
+            <span style={{ color: "oklch(0.72 0.18 293)" }}>Are Saying.</span>
+          </h2>
+        </div>
+
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 ${inView ? "animate-fade-up animate-fade-up-delay-2" : "opacity-0"}`}>
+          {testimonials.map((t, i) => (
+            <div key={i} className="rounded-xl p-8 flex flex-col border card-lift" style={{ background: "oklch(0.13 0.007 285)", borderColor: "oklch(0.22 0.01 285)" }}>
+              {/* Stars */}
+              <div className="flex gap-1 mb-6">
+                {[...Array(5)].map((_, s) => (
+                  <Star key={s} size={14} fill="oklch(0.72 0.18 293)" style={{ color: "oklch(0.72 0.18 293)" }} />
+                ))}
+              </div>
+              {/* Quote */}
+              <p className="text-white/70 text-sm leading-relaxed flex-1 mb-8" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                "{t.quote}"
+              </p>
+              {/* Author */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold shrink-0" style={{ background: "oklch(0.52 0.22 293 / 0.2)", color: "oklch(0.72 0.18 293)", fontFamily: "'Syne', sans-serif" }}>
+                  {t.initials}
+                </div>
+                <div>
+                  <p className="text-white text-sm font-bold" style={{ fontFamily: "'Syne', sans-serif" }}>{t.name}</p>
+                  <p className="text-white/40 text-xs" style={{ fontFamily: "'DM Sans', sans-serif" }}>{t.title}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ─── Change #7: New Pricing Section ───────────────────────────────────────────
 function PricingSection() {
   const { ref, inView } = useInView();
@@ -1161,6 +1231,7 @@ export default function Home() {
       <AIAutomation />
       <WhyAtlas />
       <Results />
+      <Testimonials />
       <PricingSection />
       <HostingPlans />
       <FAQ />

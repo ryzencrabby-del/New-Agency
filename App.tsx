@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./ErrorBoundary";
 import { ThemeProvider } from "./ThemeContext";
 import Home from "./Home";
+import { Analytics } from "@vercel/analytics/react";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <Analytics />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
